@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include "screen.h"
 #include "comm.h"
+#include "sound.h"
 
 int main(void) {
 	Position cur = getscreensize();
@@ -11,7 +12,7 @@ int main(void) {
 	senddata(poststr, URL);
 	gotoXY(1,1);
 	printf("Screen size, ROW =%d, COL=%d\n",cur.row,cur.col);
-	printf("HTTP post is sent to %s\n");
+	printf("HTTP post is sent to %s\n", URL);
 	getchar();	//waiting for the user to press a key
 	getchar();
 	for(int i=0; i<cur.row; i++) {
@@ -35,4 +36,10 @@ int main(void) {
 	resetcolors();
 	clearscreen();
 	printf("This text is displayed in default color\n");
+	FILE *fp;
+	fp = fopen("test.wav", "r");
+	WAVheader h = readwavhdr(fp);
+	fclose(fp);
+	displayWAVhdr(h);
 }
+
