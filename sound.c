@@ -38,23 +38,21 @@ void wavdata(WAVheader h, FILE *fp){
 		}
 		double re = sqrt(sum/500);
 #ifdef SDEBUG
-	printf("db[%d] = %f\n",i+1,20*log10(re));
+		printf("db[%d] = %f\n",i+1,20*log10(re));
 #else 
-	// displaybar for re value
-	if(20*log10(re)>60) {
-	setfgcolor(RED);
-		if(flag == 0){
-			flag = 1;
-			peaks++;  // I got a peak
-}
-	else {
-		setfgcolor(WHITE);
-		flag = 0;
-	}
-	drawbar(i+1, (int)20*log10(re/3));
-
-}	
-
+		// displaybar for re value
+		if(20*log10(re)>60) {
+			setfgcolor(RED);
+			if(flag == 0){
+				flag = 1;
+				peaks++;  // I got a peak
+			}
+		}
+		else {
+			setfgcolor(WHITE);
+			flag = 0;
+		}	
+		drawbar(i+1, (int)20*log10(re)/3);
 
 #endif
 	}

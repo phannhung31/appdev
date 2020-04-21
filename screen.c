@@ -34,17 +34,19 @@ void clearscreen(void){
 void resetcolors(void){
 	printf("%c[0m",ESC);
 }
+
 void gotoXY(int row, int col){
 	printf("%c[%d;%dH", ESC, row, col);
 }
+
 void drawbar(int col, int height){
 	int i;
 	for(i=1; i<=height; i++){
 		gotoXY(35-i, col);
 #ifdef UNICODE
-	printf("%s", BAR);
+		printf("%s", BAR);
 #else
-	printf("%c",'|');
+		printf("%c",'|');
 #endif
 	}
 }
