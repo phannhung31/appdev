@@ -3,7 +3,7 @@
 // 2. constant definitions 
 
 // constant definitions
-#define ESC 0x1B		// or using hex 0x1B
+#define ESC 27		// or using hex 0x1B
 // make enumeration for fg colors
 enum FG {BLACK =30,RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE};
 #define UNICODE
