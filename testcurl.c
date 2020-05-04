@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <i386-linux-gnu/curl/curl.h>
 
-#define URL "http://www.cc.puv.fi/~gc/php/raspsound.php"
+#define URL "http://www.cc.puv.fi/~gc/php/raspsound.php"	// URL we want to send 
 
 int main(void) {
 	CURL *curl;

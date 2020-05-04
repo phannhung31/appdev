@@ -8,14 +8,6 @@ General Description of the Application
 	This project helps us get knowledge about software application development
 
 Table of Contents 
-1. Configuraion instructions
-2. Installation instructions
-3. Operating instructions
-4. File manifest 
-5. Copyright and licensing information 
-6. Contact information 
-7. Credits and acknowledgements 
-
 
 1. Configuration instructions 
 	We need use executed terminal to  run this application. 

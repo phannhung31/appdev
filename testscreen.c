@@ -1,4 +1,4 @@
-
+// test function in screen.c
 #include <stdio.h>
 #include <unistd.h>
 #include "screen.h"
@@ -11,7 +11,7 @@ int main(void) {
 	sprintf(poststr,"row=%d&col=%d", cur.row,cur.col);
 	senddata(poststr, URL);
 	gotoXY(1,1);
-	printf("Screen size, ROW =%d, COL=%d\n",cur.row,cur.col);
+	printf("Screen size, ROW =%d, COL=%d\n",cur.row,cur.col);// print the column and row size 
 	printf("HTTP post is sent to %s\n", URL);
 	getchar();	//waiting for the user to press a key
 	getchar();
@@ -38,7 +38,7 @@ int main(void) {
 	printf("This text is displayed in default color\n");
 	FILE *fp;
 	fp = fopen("test.wav", "r");
-	WAVheader h = readwavhdr(fp);
+	WAVheader h = readwavhdr(fp); // checking header of wav file
 	displayWAVhdr(h);
 	wavdata(h,fp);	// to calculate dB values and display them
 
