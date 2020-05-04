@@ -3,4 +3,4 @@
 
 // function declarations 
 
-void senddata(char *, char *);
+void senddata(char *, char *);	// function prototype

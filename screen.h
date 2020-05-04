@@ -16,7 +16,8 @@ enum FG {BLACK =30,RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE};
 //be decoded by an escape sequence ESC[6n, and query reply should be a string
 //consisting row and col numbers of the cursor.
 
-typedef struct{
+typedef struct	// this struct define a compound data
+{
 	int row;
 	int col;
 }Position; 

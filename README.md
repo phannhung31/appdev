@@ -5,8 +5,7 @@
 
 General Description of the Application 
 
-	This application will...
-	Always indent for paragraphs. 
+	This project helps us get knowledge about software application development
 
 Table of Contents 
 1. Configuraion instructions
@@ -19,16 +18,18 @@ Table of Contents
 
 
 1. Configuration instructions 
-	In this section you need to tell the user how to configure the system(s)
-	to run this application. 
+	We need use executed terminal to  run this application. 
 
 2. Installation instructions 
-	In this section you need to tell the user how to install this application
-	from source code (usually is github repository) to an executable. 
+	Install putty
+	Install Git for Windows
+	Open Putty and connect to test your connection via SSH and add the server's key as a known host 
+	Use commands like git clone, git push, etc to access the upstream repository will now work correctly
 
 3. Operating instructions 
-	In this section you need to tell the user how to run the application. E.q.,
-	any command line arguments needed, any 3rd party library needed, etc. 
+	Use makefile to create the executable file called edit type: make
+	Use makefile to delete the executable file and all the object files from the directory, type: make clean 
+	If you compile successfully type './sound.c"(depend on your filename) to run the program.
 
 4. File manifest
 	In this section you need to offer a list of files included in this 
@@ -45,4 +46,11 @@ Table of Contents
 
 5. Copyright and licensing information 
 	This application follows GPLv2 license. 
+
+6. Contact inforation 
+	Facebook: Phan Nhung 
+	Email: Nhungphan310199@gmail.com 
+
+ 7.Credit and Acknowledgements 
+	The project is done by Nhung Phan e1900317 under the supervision of Mr. Gao Chao. 
 

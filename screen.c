@@ -17,29 +17,29 @@ int devicestatus(void){
 	sscanf(status, "%c%c%d%c", &dum, &dum, &ret, &dum);
 	return ret;
 } 
-void setfgcolor(int fg){
+void setfgcolor(int fg){	// set foreground color
 	printf("%c[1;%dm", ESC, fg);
 }
 
-void setbgcolor(int bg){
+void setbgcolor(int bg){	// set background color
 	printf("%c[1;%dm", ESC, bg);
 }
 void setcolors(int f, int b){
 	setfgcolor(f);
 	setbgcolor(bg(b));
 }
-void clearscreen(void){
+void clearscreen(void){	// function clear the screen 
 	printf("%c[2J",ESC);
 }
-void resetcolors(void){
+void resetcolors(void){	// reset color back to default
 	printf("%c[0m",ESC);
 }
 
-void gotoXY(int row, int col){
+void gotoXY(int row, int col){	// send text to coordinate
 	printf("%c[%d;%dH", ESC, row, col);
 }
 
-void drawbar(int col, int height){
+void drawbar(int col, int height){	// draw bar with specific height and width
 	int i;
 	for(i=1; i<=height; i++){
 		gotoXY(35-i, col);
